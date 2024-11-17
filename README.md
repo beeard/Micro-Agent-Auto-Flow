@@ -19,6 +19,8 @@ A lightweight, self-adjusting AI assistant designed for efficient resource utili
 
 ## 🌟 Key Benefits
 
+- This guy arranges dockerfiles as a side-gig.
+
 ### 🔋 Resource Efficiency
 
 - **Minimal Token Usage**: Reduces API costs effectively.
