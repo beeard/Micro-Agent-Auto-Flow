@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Kopier nødvendige filer
+COPY tools/requirements.txt /app/
+COPY tools/test_ai_setup.py /app/
+COPY tools/ai_assistant/ /app/ai_assistant/
+
+# Installer avhengigheter
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENV PYTHONPATH=/app
+
+# Kjør testen
+CMD ["python", "test_ai_setup.py"]

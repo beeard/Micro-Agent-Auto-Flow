@@ -1,0 +1,10 @@
+# Tidligere versjon
+services:
+  ai-test:
+    build:
+      context: ..
+      dockerfile: tools/Dockerfile.test
+    volumes:
+      - ../.env:/app/.env:ro
+    environment:
+      - PYTHONUNBUFFERED=1
